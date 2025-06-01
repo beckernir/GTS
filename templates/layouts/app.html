@@ -30,10 +30,12 @@
     <div id="layout-wrapper">
         {% include 'components/header.html' %}
         {% include 'components/sidebar.html' %}
+        <div class="main-content">
+            <div class="page-content">
+                {% block content %}{% endblock content %}
+            </div>
+        </div>
 
-        {% block content %}{% endblock content %}
-
-        {% include 'components/footer.html' %}
     </div>
     <!--start back-to-top-->
     <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
